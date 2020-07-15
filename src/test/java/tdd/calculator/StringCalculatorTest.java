@@ -26,6 +26,7 @@ public class StringCalculatorTest {
         assertThat(result).isEqualTo(0);
     }
 
+//    @ParameterizedTest(name = "test_{index}_should_return_{1}_for_{0}")
     @ParameterizedTest(name = "Should return {1} for {0}")
     @CsvSource(value = {"10:10", "10,20:30", "10,20,10:40", "1\\n2,3:6"}, delimiter = ':')
     void should_return_sum_of_numbers_for_given_input_numbers(String numbers, int expected) {
