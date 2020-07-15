@@ -7,7 +7,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class StringCalculatorTest {
 
     @Test
-    public void startHere() {
-        assertThat(4).isEqualTo(5);
+    public void should_return_0_for_empty_string() {
+        StringCalculator stringCalculator = new StringCalculator();
+        String numbers = "";
+
+        int result = stringCalculator.add(numbers);
+
+        assertThat(result).isEqualTo(0);
     }
 }
